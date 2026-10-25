@@ -1,0 +1,6 @@
+{
+  "name": "PulseFeedback - Enterprise Survey & Sentiment Intelligence",
+  "description": "Enterprise survey builder, telemetry analytics, and administrative governance console for voice-of-the-customer and employee health pulses.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

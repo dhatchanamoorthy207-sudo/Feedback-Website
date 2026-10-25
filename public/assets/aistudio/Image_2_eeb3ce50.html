@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@600;700&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"error-container":"#ffdad6","on-background":"#0d1c2e","tertiary-fixed":"#89f5e7","on-primary-fixed-variant":"#173bab","surface-variant":"#d5e3fc","secondary-fixed-dim":"#93ccff","primary-container":"#1e40af","on-primary":"#ffffff","tertiary":"#003c36","inverse-primary":"#b8c4ff","on-tertiary-fixed-variant":"#005049","on-primary-container":"#a8b8ff","on-error":"#ffffff","surface-container-low":"#eff4ff","surface-container-highest":"#d5e3fc","on-secondary-fixed-variant":"#004b73","outline-variant":"#c4c5d5","surface-bright":"#f8f9ff","on-tertiary-container":"#5fcdbf","on-tertiary-fixed":"#00201d","surface-tint":"#3755c3","on-error-container":"#93000a","tertiary-fixed-dim":"#6bd8cb","surface":"#f8f9ff","on-secondary-fixed":"#001d31","background":"#f8f9ff","error":"#ba1a1a","primary-fixed-dim":"#b8c4ff","on-secondary-container":"#00476e","secondary":"#006398","secondary-fixed":"#cce5ff","outline":"#757684","tertiary-container":"#00554e","on-tertiary":"#ffffff","primary":"#00288e","on-primary-fixed":"#001453","on-surface":"#0d1c2e","on-surface-variant":"#444653","inverse-on-surface":"#eaf1ff","surface-container-high":"#dce9ff","surface-dim":"#ccdbf3","primary-fixed":"#dde1ff","secondary-container":"#5bb8fe","surface-container":"#e6eeff","inverse-surface":"#233144","surface-container-lowest":"#ffffff","on-secondary":"#ffffff"},"borderRadius":{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},"spacing":{"margin":"2rem","space-sm":"0.5rem","gutter":"1.5rem","space-xl":"2.5rem","space-md":"1rem","space-xs":"0.25rem","space-lg":"1.5rem"},"fontFamily":{"display-lg-mobile":["Hanken Grotesk"],"body-sm":["Inter"],"headline-sm":["Hanken Grotesk"],"label-md":["Inter"],"label-sm":["Inter"],"display-lg":["Hanken Grotesk"],"headline-xl":["Hanken Grotesk"],"headline-lg":["Hanken Grotesk"],"code-sm":["Inter"],"body-md":["Inter"],"body-lg":["Inter"]},"fontSize":{"display-lg-mobile":["30px",{"lineHeight":"38px","letterSpacing":"-0.015em","fontWeight":"700"}],"body-sm":["13px",{"lineHeight":"20px","fontWeight":"400"}],"headline-sm":["18px",{"lineHeight":"26px","letterSpacing":"-0.005em","fontWeight":"600"}],"label-md":["13px",{"lineHeight":"18px","letterSpacing":"0.01em","fontWeight":"600"}],"label-sm":["11px",{"lineHeight":"16px","letterSpacing":"0.04em","fontWeight":"600"}],"display-lg":["40px",{"lineHeight":"48px","letterSpacing":"-0.02em","fontWeight":"700"}],"headline-xl":["28px",{"lineHeight":"36px","letterSpacing":"-0.015em","fontWeight":"600"}],"headline-lg":["22px",{"lineHeight":"30px","letterSpacing":"-0.01em","fontWeight":"600"}],"code-sm":["12px",{"lineHeight":"16px","fontWeight":"500"}],"body-md":["15px",{"lineHeight":"24px","fontWeight":"400"}],"body-lg":["17px",{"lineHeight":"26px","fontWeight":"400"}]}}}};</script></head><body class="bg-background font-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-64 bg-surface-container-lowest border-r border-outline-variant/30 z-50 flex flex-col justify-between"><div class="flex flex-col flex-1"><div class="h-16 px-space-lg flex items-center gap-space-sm border-b border-outline-variant/20"><img alt="PulseFeedback Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1XuD6oUC1X53ZChyMbqr0Epew5QXkfrbwz6qF-yL5O-lMVjGuYn5n3PAhUTNtojDp9Y3M19DG6w85OrHfs25ebo5uQ-t7OC7EzHfZgwv989OS4Av1F_kHRwc0pGRqolKgSit-2vfyeIYlvWv9veFGVY-Lea8TcC6jHmc18u8UuGHcyqEbYcvPUHikgPv6Btj1WOjmkmPTD19n9IGUXk9_l9xMN3NteQfZlDA3XLszU5huN3BqZX7FLBi2Pg"/><span class="font-headline-sm text-headline-sm text-primary tracking-tight">PulseFeedback</span></div><div class="p-space-md"><p class="px-space-sm pb-space-xs font-label-sm text-label-sm uppercase tracking-wider text-outline">Navigation</p><nav class="flex flex-col gap-space-xs" data-active-classes="bg-primary-container text-on-primary font-semibold shadow-sm"><a aria-current="page" class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg transition-colors bg-primary-container text-on-primary font-semibold shadow-sm" data-path="dashboard-overview" href="#"><span class="material-symbols-outlined text-[20px]">grid_view</span><span class="font-label-md text-label-md">Dashboard Overview</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors" data-path="my-surveys" href="#"><span class="material-symbols-outlined text-[20px]">ballot</span><span class="font-label-md text-label-md">My Surveys</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors" data-path="survey-builder" href="#"><span class="material-symbols-outlined text-[20px]">tune</span><span class="font-label-md text-label-md">Survey Builder</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors" data-path="results-and-analytics" href="#"><span class="material-symbols-outlined text-[20px]">insights</span><span class="font-label-md text-label-md">Results &amp; Analytics</span></a></nav><div class="my-space-md border-t border-outline-variant/20"></div><p class="px-space-sm pb-space-xs font-label-sm text-label-sm uppercase tracking-wider text-outline">System</p><nav class="flex flex-col gap-space-xs" data-active-classes="bg-primary-container text-on-primary font-semibold shadow-sm"><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors" data-path="settings" href="#"><span class="material-symbols-outlined text-[20px]">settings</span><span class="font-label-md text-label-md">Settings</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors" data-path="documentation" href="#"><span class="material-symbols-outlined text-[20px]">menu_book</span><span class="font-label-md text-label-md">Documentation</span></a></nav></div></div><div class="p-space-md border-t border-outline-variant/20 bg-surface-container-low/50"><div class="flex items-center gap-space-sm px-space-sm py-space-xs"><span class="material-symbols-outlined text-secondary text-[20px]">verified_user</span><div class="flex flex-col"><span class="font-label-sm text-label-sm text-on-surface font-semibold">SOC2 Type II</span><span class="font-code-sm text-code-sm text-outline">Data Encrypted</span></div></div></div></aside><div class="pl-64"><header class="fixed top-0 left-64 right-0 h-16 bg-surface-container-lowest/90 backdrop-blur-md border-b border-outline-variant/30 z-40 flex items-center justify-between px-space-xl"><div class="flex items-center gap-space-md flex-1 max-w-xl"><div class="inline-flex items-center gap-space-xs px-space-sm py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm font-semibold"><span class="material-symbols-outlined text-[14px]">badge</span>User Portal</div><div class="relative flex-1"><span class="material-symbols-outlined absolute left-space-md top-1/2 -translate-y-1/2 text-outline text-[18px]">search</span><input class="w-full pl-9 pr-space-md py-1.5 bg-surface-container-low text-on-surface placeholder:text-outline border border-outline-variant/40 rounded-lg font-body-sm text-body-sm focus:outline-none focus:border-primary-container focus:bg-surface-container-lowest transition-colors" placeholder="Search surveys, cohorts, metrics..." type="text"/></div></div><div class="flex items-center gap-space-lg"><button aria-label="Notifications" class="relative p-space-xs text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low rounded-lg transition-colors" type="button"><span class="material-symbols-outlined text-[22px]">notifications</span><span class="absolute top-1 right-1 w-2 h-2 rounded-full bg-error"></span></button><div class="h-6 w-px bg-outline-variant/40"></div><div class="flex items-center gap-space-sm cursor-pointer py-1 px-space-xs rounded-lg hover:bg-surface-container-low transition-colors"><img alt="Profile" class="w-8 h-8 rounded-full object-cover border border-outline-variant/40" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDyLz5kpW_54gXQu_VzWn3c3SNqTbXtiLk7AMShSuEmWalWLvcvtGueoXsZyKhTiFaKKA3ykUKH5aZ7c0mJTPNGwnhTHQPbLDgGsD6J_TyQQ8L17pycVrgDqOxvbl9RihZiQI7-pazvukAezaDNefuS9J7a1rfDt1KmHRm0DeTw2FQVSMoSroh48VHn0YnTusTMDkaACSCdSa2s235Lh31wL4rNZyx5-uLu5nCIoLlsoOnybB2n9a96wg"/><div class="flex flex-col text-left"><span class="font-label-md text-label-md text-on-surface font-semibold leading-tight">Sarah Jenkins</span><span class="font-label-sm text-label-sm text-outline leading-tight">Full-Stack Engineer</span></div><span class="material-symbols-outlined text-outline text-[18px]">expand_more</span></div></div></header><main class="relative pt-16 bg-background min-h-screen"><div class="flex flex-col w-full">
+<div class="px-space-xl py-space-lg flex flex-col gap-space-lg max-w-7xl mx-auto w-full">
+<!-- Top Welcome & Actions Header -->
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-space-md bg-surface-container-lowest p-space-lg rounded-xl shadow-sm">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center gap-space-xs">
+<h1 class="font-headline-xl text-headline-xl text-on-surface">Welcome back, Sarah Jenkins 👋</h1>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">Here is what is happening with your active surveys and response rates today.</p>
+</div>
+<div class="flex items-center gap-space-sm self-start md:self-auto">
+<button class="inline-flex items-center gap-space-xs px-space-md py-2.5 rounded-lg bg-surface-container-low text-on-surface hover:bg-surface-container transition-colors shadow-sm font-label-md text-label-md" id="quickExportBtn" type="button">
+<span class="material-symbols-outlined text-[18px]">download</span>
+<span>Quick Export CSV</span>
+</button>
+<a class="inline-flex items-center gap-space-xs px-space-lg py-2.5 rounded-lg bg-primary-container text-on-primary hover:bg-primary transition-all duration-150 shadow-sm hover:shadow-md font-label-md text-label-md" data-path="survey-builder" href="#">
+<span class="material-symbols-outlined text-[18px]">add</span>
+<span>+ Create New Survey</span>
+</a>
+</div>
+</div>
+<!-- 4 Key Metric Summary Cards -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-space-md">
+<!-- Total Surveys -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline font-semibold">Total Surveys</span>
+<div class="w-9 h-9 rounded-lg bg-surface-container flex items-center justify-center text-primary-container">
+<span class="material-symbols-outlined text-[20px]">assignment</span>
+</div>
+</div>
+<div class="mt-space-md flex items-baseline justify-between">
+<span class="font-headline-xl text-headline-xl text-on-surface">12</span>
+<div class="inline-flex items-center gap-0.5 px-space-xs py-0.5 rounded-full bg-surface-container-low text-primary-container font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-[14px]">arrow_upward</span>
+            +2 this month
+          </div>
+</div>
+</div>
+<!-- Active / Published -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline font-semibold">Active / Published</span>
+<div class="w-9 h-9 rounded-lg bg-tertiary-fixed/30 flex items-center justify-center text-tertiary-container">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">sensors</span>
+</div>
+</div>
+<div class="mt-space-md flex items-baseline justify-between">
+<span class="font-headline-xl text-headline-xl text-on-surface">8</span>
+<div class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary-container animate-pulse"></span>
+            8 Active Now
+          </div>
+</div>
+</div>
+<!-- Total Responses Collected -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline font-semibold">Total Responses</span>
+<div class="w-9 h-9 rounded-lg bg-surface-container-high flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[20px]">how_to_reg</span>
+</div>
+</div>
+<div class="mt-space-md flex items-baseline justify-between">
+<span class="font-headline-xl text-headline-xl text-on-surface">1,842</span>
+<div class="inline-flex items-center gap-0.5 px-space-xs py-0.5 rounded-full bg-surface-container-low text-secondary font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-[14px]">trending_up</span>
+            +18.4% MoM
+          </div>
+</div>
+</div>
+<!-- Avg Completion Rate -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline font-semibold">Avg Completion Rate</span>
+<div class="w-9 h-9 rounded-lg bg-secondary-fixed/40 flex items-center justify-center text-primary-container">
+<span class="material-symbols-outlined text-[20px]">donut_large</span>
+</div>
+</div>
+<div class="mt-space-md flex items-baseline justify-between">
+<span class="font-headline-xl text-headline-xl text-on-surface">84.6%</span>
+<div class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed-variant font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-[13px]">verified</span>
+            High Engagement
+          </div>
+</div>
+</div>
+</div>
+<!-- Main Content Split -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-start">
+<!-- Left Column (approx 65% width = 8 cols out of 12) -->
+<div class="lg:col-span-8 flex flex-col gap-space-lg">
+<!-- Recent Surveys Card -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm p-space-lg flex flex-col">
+<!-- Header, Filter Tabs, and Search Bar -->
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-md pb-space-md">
+<div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">Recent Surveys &amp; Performance</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Manage response funnels, public distribution links, and telemetry.</p>
+</div>
+<div class="relative w-full sm:w-64">
+<span class="material-symbols-outlined absolute left-2.5 top-1/2 -translate-y-1/2 text-outline text-[18px]">filter_list</span>
+<input class="w-full pl-8 pr-3 py-1.5 bg-surface-container-low text-on-surface placeholder:text-outline rounded-lg font-body-sm text-body-sm focus:outline-none focus:bg-surface-container transition-colors" id="surveySearchInput" placeholder="Filter current list..." type="text"/>
+</div>
+</div>
+<!-- Status Filter Tabs -->
+<div class="flex items-center gap-space-xs p-1 bg-surface-container-low rounded-lg self-start mb-space-md">
+<button class="survey-tab-btn active px-space-md py-1 rounded-md font-label-sm text-label-sm font-semibold bg-surface-container-lowest text-primary-container shadow-sm transition-all" data-filter="all" type="button">All (12)</button>
+<button class="survey-tab-btn px-space-md py-1 rounded-md font-label-sm text-label-sm font-semibold text-on-surface-variant hover:text-on-surface transition-all" data-filter="published" type="button">Published (8)</button>
+<button class="survey-tab-btn px-space-md py-1 rounded-md font-label-sm text-label-sm font-semibold text-on-surface-variant hover:text-on-surface transition-all" data-filter="draft" type="button">Draft (3)</button>
+<button class="survey-tab-btn px-space-md py-1 rounded-md font-label-sm text-label-sm font-semibold text-on-surface-variant hover:text-on-surface transition-all" data-filter="closed" type="button">Closed (1)</button>
+</div>
+<!-- Survey Items Container -->
+<div class="flex flex-col gap-space-sm" id="surveyList">
+<!-- Survey Item 1 -->
+<div class="survey-row group flex flex-col sm:flex-row sm:items-center justify-between p-space-md bg-surface-container-lowest rounded-lg hover:bg-surface-container-low transition-all duration-150 shadow-sm hover:shadow" data-status="published" data-title="Customer Onboarding Experience 2025">
+<div class="flex items-start gap-space-md min-w-0">
+<div class="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center text-primary-container shrink-0 mt-0.5 sm:mt-0">
+<span class="material-symbols-outlined text-[20px]">sentiment_satisfied</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-space-sm flex-wrap">
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold truncate">Customer Onboarding Experience 2025</span>
+<span class="inline-flex items-center px-2 py-0.5 rounded-full text-on-tertiary-fixed bg-tertiary-fixed font-label-sm text-label-sm font-semibold">Published</span>
+</div>
+<div class="flex items-center gap-space-md mt-1 font-body-sm text-body-sm text-on-surface-variant flex-wrap">
+<span class="flex items-center gap-1 font-semibold text-on-surface">
+<span class="material-symbols-outlined text-[16px] text-secondary">forum</span>
+                      842 responses
+                    </span>
+<span class="text-outline">•</span>
+<span>91.2% completion</span>
+<span class="text-outline">•</span>
+<span class="text-outline">Edited 2h ago</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-space-xs mt-space-md sm:mt-0 self-end sm:self-auto">
+<button class="copy-link-btn relative p-2 rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface-variant hover:text-on-surface transition-colors" data-url="https://pulse.io/s/cust-onboard-25" title="Copy shareable link" type="button">
+<span class="material-symbols-outlined text-[18px]">link</span>
+<span class="tooltip hidden absolute -top-8 left-1/2 -translate-x-1/2 px-2 py-0.5 rounded bg-inverse-surface text-inverse-on-surface font-label-sm text-label-sm shadow-md whitespace-nowrap">Link Copied!</span>
+</button>
+<a class="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface font-label-sm text-label-sm font-semibold transition-colors" data-path="results-and-analytics" href="#">
+<span class="material-symbols-outlined text-[16px] text-primary-container">query_stats</span>
+                  Analytics
+                </a>
+<a class="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface font-label-sm text-label-sm font-semibold transition-colors" data-path="survey-builder" href="#">
+<span class="material-symbols-outlined text-[16px]">edit</span>
+                  Edit
+                </a>
+<button class="p-1.5 rounded-lg text-outline hover:text-on-surface hover:bg-surface-container-low transition-colors" type="button">
+<span class="material-symbols-outlined text-[20px]">more_vert</span>
+</button>
+</div>
+</div>
+<!-- Survey Item 2 -->
+<div class="survey-row group flex flex-col sm:flex-row sm:items-center justify-between p-space-md bg-surface-container-lowest rounded-lg hover:bg-surface-container-low transition-all duration-150 shadow-sm hover:shadow" data-status="published" data-title="Engineering Team Health Pulse Q1">
+<div class="flex items-start gap-space-md min-w-0">
+<div class="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center text-secondary shrink-0 mt-0.5 sm:mt-0">
+<span class="material-symbols-outlined text-[20px]">groups</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-space-sm flex-wrap">
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold truncate">Engineering Team Health Pulse Q1</span>
+<span class="inline-flex items-center px-2 py-0.5 rounded-full text-on-tertiary-fixed bg-tertiary-fixed font-label-sm text-label-sm font-semibold">Published</span>
+</div>
+<div class="flex items-center gap-space-md mt-1 font-body-sm text-body-sm text-on-surface-variant flex-wrap">
+<span class="flex items-center gap-1 font-semibold text-on-surface">
+<span class="material-symbols-outlined text-[16px] text-secondary">forum</span>
+                      524 responses
+                    </span>
+<span class="text-outline">•</span>
+<span>88.0% completion</span>
+<span class="text-outline">•</span>
+<span class="text-outline">Edited yesterday</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-space-xs mt-space-md sm:mt-0 self-end sm:self-auto">
+<button class="copy-link-btn relative p-2 rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface-variant hover:text-on-surface transition-colors" data-url="https://pulse.io/s/eng-health-q1" title="Copy shareable link" type="button">
+<span class="material-symbols-outlined text-[18px]">link</span>
+<span class="tooltip hidden absolute -top-8 left-1/2 -translate-x-1/2 px-2 py-0.5 rounded bg-inverse-surface text-inverse-on-surface font-label-sm text-label-sm shadow-md whitespace-nowrap">Link Copied!</span>
+</button>
+<a class="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface font-label-sm text-label-sm font-semibold transition-colors" data-path="results-and-analytics" href="#">
+<span class="material-symbols-outlined text-[16px] text-primary-container">query_stats</span>
+                  Analytics
+                </a>
+<a class="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface font-label-sm text-label-sm font-semibold transition-colors" data-path="survey-builder" href="#">
+<span class="material-symbols-outlined text-[16px]">edit</span>
+                  Edit
+                </a>
+<button class="p-1.5 rounded-lg text-outline hover:text-on-surface hover:bg-surface-container-low transition-colors" type="button">
+<span class="material-symbols-outlined text-[20px]">more_vert</span>
+</button>
+</div>
+</div>
+<!-- Survey Item 3 -->
+<div class="survey-row group flex flex-col sm:flex-row sm:items-center justify-between p-space-md bg-surface-container-lowest rounded-lg hover:bg-surface-container-low transition-all duration-150 shadow-sm hover:shadow" data-status="draft" data-title="Product Feature Prioritization">
+<div class="flex items-start gap-space-md min-w-0">
+<div class="w-10 h-10 rounded-lg bg-surface-container-low flex items-center justify-center text-outline shrink-0 mt-0.5 sm:mt-0">
+<span class="material-symbols-outlined text-[20px]">format_list_bulleted</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-space-sm flex-wrap">
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold truncate">Product Feature Prioritization</span>
+<span class="inline-flex items-center px-2 py-0.5 rounded-full text-on-surface-variant bg-surface-container-high font-label-sm text-label-sm font-semibold">Draft</span>
+</div>
+<div class="flex items-center gap-space-md mt-1 font-body-sm text-body-sm text-on-surface-variant flex-wrap">
+<span class="text-outline">0 responses (not published)</span>
+<span class="text-outline">•</span>
+<span class="text-outline">Edited 3 days ago</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-space-xs mt-space-md sm:mt-0 self-end sm:self-auto">
+<a class="inline-flex items-center gap-1 px-3.5 py-1.5 rounded-lg bg-primary-container text-on-primary hover:bg-primary font-label-sm text-label-sm font-semibold transition-colors" data-path="survey-builder" href="#">
+<span class="material-symbols-outlined text-[16px]">edit_note</span>
+                  Continue Editing
+                </a>
+<button class="p-1.5 rounded-lg text-outline hover:text-on-surface hover:bg-surface-container-low transition-colors" type="button">
+<span class="material-symbols-outlined text-[20px]">more_vert</span>
+</button>
+</div>
+</div>
+<!-- Survey Item 4 -->
+<div class="survey-row group flex flex-col sm:flex-row sm:items-center justify-between p-space-md bg-surface-container-lowest rounded-lg hover:bg-surface-container-low transition-all duration-150 shadow-sm hover:shadow" data-status="published" data-title="Website Redesign UX Feedback">
+<div class="flex items-start gap-space-md min-w-0">
+<div class="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center text-primary-container shrink-0 mt-0.5 sm:mt-0">
+<span class="material-symbols-outlined text-[20px]">devices</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-space-sm flex-wrap">
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold truncate">Website Redesign UX Feedback</span>
+<span class="inline-flex items-center px-2 py-0.5 rounded-full text-on-tertiary-fixed bg-tertiary-fixed font-label-sm text-label-sm font-semibold">Published</span>
+</div>
+<div class="flex items-center gap-space-md mt-1 font-body-sm text-body-sm text-on-surface-variant flex-wrap">
+<span class="flex items-center gap-1 font-semibold text-on-surface">
+<span class="material-symbols-outlined text-[16px] text-secondary">forum</span>
+                      476 responses
+                    </span>
+<span class="text-outline">•</span>
+<span>74.5% completion</span>
+<span class="text-outline">•</span>
+<span class="text-outline">Edited 5 days ago</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-space-xs mt-space-md sm:mt-0 self-end sm:self-auto">
+<button class="copy-link-btn relative p-2 rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface-variant hover:text-on-surface transition-colors" data-url="https://pulse.io/s/web-redesign-ux" title="Copy shareable link" type="button">
+<span class="material-symbols-outlined text-[18px]">link</span>
+<span class="tooltip hidden absolute -top-8 left-1/2 -translate-x-1/2 px-2 py-0.5 rounded bg-inverse-surface text-inverse-on-surface font-label-sm text-label-sm shadow-md whitespace-nowrap">Link Copied!</span>
+</button>
+<a class="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface font-label-sm text-label-sm font-semibold transition-colors" data-path="results-and-analytics" href="#">
+<span class="material-symbols-outlined text-[16px] text-primary-container">query_stats</span>
+                  Analytics
+                </a>
+<a class="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface font-label-sm text-label-sm font-semibold transition-colors" data-path="survey-builder" href="#">
+<span class="material-symbols-outlined text-[16px]">edit</span>
+                  Edit
+                </a>
+<button class="p-1.5 rounded-lg text-outline hover:text-on-surface hover:bg-surface-container-low transition-colors" type="button">
+<span class="material-symbols-outlined text-[20px]">more_vert</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Bottom Summary Footer within Survey List -->
+<div class="mt-space-md pt-space-sm flex items-center justify-between text-on-surface-variant font-body-sm text-body-sm">
+<span id="showingCount">Showing 4 of 12 surveys</span>
+<a class="font-label-md text-label-md text-primary hover:underline flex items-center gap-1" data-path="my-surveys" href="#">
+              View all surveys
+              <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Weekly Response Volume Sparkline Chart Card -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm p-space-lg flex flex-col">
+<div class="flex items-center justify-between mb-space-sm">
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline font-semibold">Aggregated Telemetry</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold">Response Velocity (Last 7 Days)</h3>
+</div>
+<div class="flex items-center gap-2">
+<span class="inline-flex items-center gap-1 font-label-sm text-label-sm text-secondary bg-surface-container-low px-2 py-1 rounded-md font-semibold">
+<span class="w-2 h-2 rounded-full bg-secondary"></span> Live Stream
+              </span>
+</div>
+</div>
+<!-- Inline SVG Area Trend Graph -->
+<div class="w-full pt-2">
+<svg class="w-full h-28 overflow-visible" preserveaspectratio="none" viewbox="0 0 700 140">
+<defs>
+<lineargradient id="areaGradient" x1="0" x2="0" y1="0" y2="1">
+<stop offset="0%" stop-color="#1e40af" stop-opacity="0.18"></stop>
+<stop offset="100%" stop-color="#1e40af" stop-opacity="0.0"></stop>
+</lineargradient>
+</defs>
+<!-- Grid background guides -->
+<line stroke="#eff4ff" stroke-width="1" x1="0" x2="700" y1="35" y2="35"></line>
+<line stroke="#eff4ff" stroke-width="1" x1="0" x2="700" y1="75" y2="75"></line>
+<line stroke="#eff4ff" stroke-width="1" x1="0" x2="700" y1="115" y2="115"></line>
+<!-- Gradient Area fill -->
+<polygon fill="url(#areaGradient)" points="0,120 0,95 116,80 233,105 350,42 466,60 583,28 700,12 700,120"></polygon>
+<!-- Line -->
+<polyline fill="none" points="0,95 116,80 233,105 350,42 466,60 583,28 700,12" stroke="#1e40af" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"></polyline>
+<!-- Data Points -->
+<circle class="hover:r-5 transition-all" cx="116" cy="80" fill="#1e40af" r="3.5"></circle>
+<circle class="hover:r-5 transition-all" cx="233" cy="105" fill="#1e40af" r="3.5"></circle>
+<circle class="hover:r-5 transition-all" cx="350" cy="42" fill="#1e40af" r="3.5"></circle>
+<circle class="hover:r-5 transition-all" cx="466" cy="60" fill="#1e40af" r="3.5"></circle>
+<circle class="hover:r-5 transition-all" cx="583" cy="28" fill="#1e40af" r="3.5"></circle>
+<circle cx="700" cy="12" fill="#006398" r="4.5" stroke="#ffffff" stroke-width="2"></circle>
+</svg>
+<div class="flex justify-between font-label-sm text-label-sm text-outline mt-2 pt-1 border-t border-surface-container">
+<span>Mon (142)</span>
+<span>Tue (190)</span>
+<span>Wed (118)</span>
+<span>Thu (310)</span>
+<span>Fri (265)</span>
+<span>Sat (389)</span>
+<span class="font-semibold text-primary">Today (428)</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Right Column (approx 35% width = 4 cols out of 12) -->
+<div class="lg:col-span-4 flex flex-col gap-space-lg">
+<!-- Quick Survey Builder Launchpad -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm p-space-lg flex flex-col">
+<div class="flex items-center gap-space-xs mb-space-xs">
+<span class="material-symbols-outlined text-primary-container text-[20px]">rocket_launch</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold">Quick Builder Launchpad</h3>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-md">Deploy tested institutional templates or build your customized branch logic.</p>
+<div class="grid grid-cols-2 gap-space-sm mb-space-md">
+<a class="flex flex-col p-3 rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface transition-all group" data-path="survey-builder" href="#">
+<span class="material-symbols-outlined text-[20px] text-primary-container group-hover:scale-110 transition-transform">mood</span>
+<span class="font-label-md text-label-md text-on-surface font-semibold mt-1">CSAT</span>
+<span class="font-label-sm text-label-sm text-outline">5 Questions</span>
+</a>
+<a class="flex flex-col p-3 rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface transition-all group" data-path="survey-builder" href="#">
+<span class="material-symbols-outlined text-[20px] text-secondary group-hover:scale-110 transition-transform">psychology</span>
+<span class="font-label-md text-label-md text-on-surface font-semibold mt-1">Employee Pulse</span>
+<span class="font-label-sm text-label-sm text-outline">8 Questions</span>
+</a>
+<a class="flex flex-col p-3 rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface transition-all group" data-path="survey-builder" href="#">
+<span class="material-symbols-outlined text-[20px] text-tertiary-container group-hover:scale-110 transition-transform">star_rate</span>
+<span class="font-label-md text-label-md text-on-surface font-semibold mt-1">NPS Metric</span>
+<span class="font-label-sm text-label-sm text-outline">Standard 0-10</span>
+</a>
+<a class="flex flex-col p-3 rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface transition-all group" data-path="survey-builder" href="#">
+<span class="material-symbols-outlined text-[20px] text-outline group-hover:scale-110 transition-transform">event_available</span>
+<span class="font-label-md text-label-md text-on-surface font-semibold mt-1">Event Feedback</span>
+<span class="font-label-sm text-label-sm text-outline">6 Questions</span>
+</a>
+</div>
+<a class="w-full py-2.5 px-space-md rounded-lg bg-surface-container-high hover:bg-surface-container-highest text-on-surface font-label-md text-label-md font-semibold text-center flex items-center justify-center gap-space-xs transition-colors" data-path="survey-builder" href="#">
+<span class="material-symbols-outlined text-[18px]">add_circle_outline</span>
+<span>Start from Scratch</span>
+</a>
+</div>
+<!-- Recent Activity Feed -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm p-space-lg flex flex-col">
+<div class="flex items-center justify-between mb-space-md">
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold">Live Activity Stream</h3>
+<span class="w-2 h-2 rounded-full bg-tertiary-fixed-dim"></span>
+</div>
+<div class="flex flex-col gap-space-md relative">
+<!-- Activity item 1 -->
+<div class="flex items-start gap-space-sm">
+<div class="w-7 h-7 rounded-full bg-tertiary-fixed flex items-center justify-center text-on-tertiary-fixed shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[15px]">check_circle</span>
+</div>
+<div class="flex flex-col min-w-0">
+<p class="font-body-sm text-body-sm text-on-surface font-medium leading-snug">New response recorded for <span class="font-semibold text-primary">Customer Onboarding</span></p>
+<span class="font-label-sm text-label-sm text-outline">3m ago • United States</span>
+</div>
+</div>
+<!-- Activity item 2 -->
+<div class="flex items-start gap-space-sm">
+<div class="w-7 h-7 rounded-full bg-surface-container-high flex items-center justify-center text-primary-container shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[15px]">send</span>
+</div>
+<div class="flex flex-col min-w-0">
+<p class="font-body-sm text-body-sm text-on-surface font-medium leading-snug">Survey published: <span class="font-semibold text-primary">Engineering Team Health</span></p>
+<span class="font-label-sm text-label-sm text-outline">2h ago • Sarah Jenkins</span>
+</div>
+</div>
+<!-- Activity item 3 -->
+<div class="flex items-start gap-space-sm">
+<div class="w-7 h-7 rounded-full bg-surface-container-low flex items-center justify-center text-secondary shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[15px]">file_download</span>
+</div>
+<div class="flex flex-col min-w-0">
+<p class="font-body-sm text-body-sm text-on-surface font-medium leading-snug">CSV dataset downloaded: <span class="font-semibold text-primary">Q4 Feedback</span></p>
+<span class="font-label-sm text-label-sm text-outline">Yesterday at 4:18 PM</span>
+</div>
+</div>
+<!-- Activity item 4 -->
+<div class="flex items-start gap-space-sm">
+<div class="w-7 h-7 rounded-full bg-surface-container-low flex items-center justify-center text-outline shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[15px]">share</span>
+</div>
+<div class="flex flex-col min-w-0">
+<p class="font-body-sm text-body-sm text-on-surface font-medium leading-snug">Sharable web link generated for <span class="font-semibold text-primary">UX Redesign</span></p>
+<span class="font-label-sm text-label-sm text-outline">3 days ago</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Database & Session Status Card -->
+<div class="bg-surface-container-low rounded-xl p-space-md flex flex-col gap-space-xs shadow-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="relative flex h-2 w-2">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-tertiary opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-tertiary-container"></span>
+</span>
+<span class="font-label-sm text-label-sm font-semibold uppercase tracking-wider text-on-surface">Store Engine Connected</span>
+</div>
+<span class="font-code-sm text-code-sm text-outline">28ms latency</span>
+</div>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Session Secure (bcrypt + SQLite persistent store with automated WAL checkpoints).</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Interactive script for Copy link, search filter, and status tabs -->
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // 1. Copy Link Tooltip Handler
+      const copyButtons = document.querySelectorAll('.copy-link-btn');
+      copyButtons.forEach(btn => {
+        btn.addEventListener('click', (e) => {
+          e.stopPropagation();
+          const url = btn.getAttribute('data-url');
+          if (navigator.clipboard) {
+            navigator.clipboard.writeText(url).then(() => {
+              showTooltip(btn);
+            }).catch(() => {
+              fallbackCopy(url, btn);
+            });
+          } else {
+            fallbackCopy(url, btn);
+          }
+        });
+      });
+
+      function fallbackCopy(text, btn) {
+        const temp = document.createElement('input');
+        temp.value = text;
+        document.body.appendChild(temp);
+        temp.select();
+        document.execCommand('copy');
+        document.body.removeChild(temp);
+        showTooltip(btn);
+      }
+
+      function showTooltip(btn) {
+        const tooltip = btn.querySelector('.tooltip');
+        if (tooltip) {
+          tooltip.classList.remove('hidden');
+          setTimeout(() => {
+            tooltip.classList.add('hidden');
+          }, 1800);
+        }
+      }
+
+      // 2. Filter Status Tabs
+      const tabs = document.querySelectorAll('.survey-tab-btn');
+      const surveyRows = document.querySelectorAll('.survey-row');
+      const showingCount = document.getElementById('showingCount');
+
+      tabs.forEach(tab => {
+        tab.addEventListener('click', () => {
+          tabs.forEach(t => {
+            t.classList.remove('bg-surface-container-lowest', 'text-primary-container', 'shadow-sm');
+            t.classList.add('text-on-surface-variant');
+          });
+          tab.classList.remove('text-on-surface-variant');
+          tab.classList.add('bg-surface-container-lowest', 'text-primary-container', 'shadow-sm');
+
+          const filter = tab.getAttribute('data-filter');
+          applyFilters();
+        });
+      });
+
+      // 3. Search Filter
+      const searchInput = document.getElementById('surveySearchInput');
+      if (searchInput) {
+        searchInput.addEventListener('input', () => {
+          applyFilters();
+        });
+      }
+
+      function applyFilters() {
+        const activeTab = document.querySelector('.survey-tab-btn.bg-surface-container-lowest');
+        const activeFilter = activeTab ? activeTab.getAttribute('data-filter') : 'all';
+        const query = (searchInput ? searchInput.value : '').toLowerCase().trim();
+
+        let visible = 0;
+        surveyRows.forEach(row => {
+          const status = row.getAttribute('data-status');
+          const title = row.getAttribute('data-title').toLowerCase();
+
+          const matchesStatus = (activeFilter === 'all') || (status === activeFilter);
+          const matchesSearch = query === '' || title.includes(query);
+
+          if (matchesStatus && matchesSearch) {
+            row.classList.remove('hidden');
+            visible++;
+          } else {
+            row.classList.add('hidden');
+          }
+        });
+
+        if (showingCount) {
+          showingCount.textContent = `Showing ${visible} of 12 surveys`;
+        }
+      }
+
+      // 4. Quick Export CSV Feedback
+      const quickExportBtn = document.getElementById('quickExportBtn');
+      if (quickExportBtn) {
+        quickExportBtn.addEventListener('click', () => {
+          const originalText = quickExportBtn.innerHTML;
+          quickExportBtn.innerHTML = '<span class="material-symbols-outlined text-[18px] animate-spin">refresh</span><span>Exporting...</span>';
+          setTimeout(() => {
+            quickExportBtn.innerHTML = '<span class="material-symbols-outlined text-[18px]">done</span><span>Export Ready!</span>';
+            setTimeout(() => {
+              quickExportBtn.innerHTML = originalText;
+            }, 2000);
+          }, 800);
+        });
+      }
+    });
+  </script>
+</div></main></div></body></html>
